@@ -22,7 +22,7 @@ sudo apt upgrade -y
 sudo apt install -y git cmake build-essential libusb-1.0-0-dev
 ```
 
-**Commandns to download and compil the RTL-SDR v4-compatibele version:**
+**Commands to download and compile the RTL-SDR v4-compatibele version:**
 
 ```
 git clone https://github.com/rtlsdrblog/rtl-sdr-blog.git
@@ -45,7 +45,15 @@ sudo make install
 ```
 sudo ldconfig
 ```
+**Command to block the default driver so it can't claim our RTL-SDR:**
 
+```
+sudo bash -c 'echo "blacklist dvb_usb_rtl28xxu" > /etc/modprobe.d/rtl-sdr-blacklist.conf'
+```
+Reboot your Pi
+```
+sudo reboot now
+```
 
 
 
