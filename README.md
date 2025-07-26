@@ -77,24 +77,37 @@ Reboot your PI
 sudo reboot now
 ```
 
-**Command to download and execute the rules to get the permissions to use your RTL-SDR:**
+**Commands to autostart RTL-TCP server:**
 
 ```
-wget -O /tmp/rtl-sdr.rules https://raw.githubusercontent.com/keenerd/rtl-sdr/master/rtl-sdr.rules
+sudo nano /etc/systemd/system/rtl_tcp.service
+```
+Now add the following text to the file
+
+```
+[Unit]
+Description=RTL-SDR TCP server
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/rtl_tcp -a 0.0.0.0
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+```
+Save the file by using ctrl-x. Next enter the following commands:
+
+```
+sudo systemctl daemon-reexec
 ```
 ```
-sudo mv /tmp/rtl-sdr.rules /etc/udev/rules.d/
+sudo systemctl enable rtl_tcp
 ```
 ```
-sudo udevadm control --reload-rules
+sudo systemctl start rtl_tcp
 ```
-```
-sudo mv /tmp/rtl-sdr.rules /etc/udev/rules.d/
-```
-```
-sudo udevadm trigger
-```
-Reboot your PI
+You are ready to use your RTL-SDR remotely, just reboot your PI and RTL-TCP will autostart
 ```
 sudo reboot now
 ```
