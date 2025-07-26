@@ -111,4 +111,4 @@ You are ready to use your RTL-SDR remotely, just reboot your PI and RTL-TCP will
 ```
 sudo reboot now
 ```
-
+[![Alt text](bitcoinmergebanner.jpg)]([https://example.com](https://bitcoinmerch.com?aff=706))
