@@ -1,4 +1,4 @@
-# Installing RTL-TCP on your Rasperry Pi
+# Installing RTL-TCP server on your Rasperry Pi
 Here you can find the commands used in the BloxyLabs videos about intalling RTL-TCP server on a Raspberry Pi.
 <br>
 <br>
