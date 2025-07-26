@@ -25,6 +25,28 @@ sudo apt install -y git cmake build-essential libusb-1.0-0-dev
 **Commandns to download and compil the RTL-SDR v4-compatibele version:**
 
 ```
-sudo apt install wget
+git clone https://github.com/rtlsdrblog/rtl-sdr-blog.git
 ```
+```
+cd rtl-sdr-blog
+```
+```
+mkdir build && cd build
+```
+```
+cmake .. -DDETACH_KERNEL_DRIVER=ON
+```
+```
+make
+```
+```
+sudo make install
+```
+```
+sudo ldconfig
+```
+
+
+
+
 
