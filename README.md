@@ -55,6 +55,47 @@ Reboot your Pi
 sudo reboot now
 ```
 
+**Commands to download and execute the rules to get the permissions to use your RTL-SDR:**
 
+```
+wget -O /tmp/rtl-sdr.rules https://raw.githubusercontent.com/keenerd/rtl-sdr/master/rtl-sdr.rules
+```
+```
+sudo mv /tmp/rtl-sdr.rules /etc/udev/rules.d/
+```
+```
+sudo udevadm control --reload-rules
+```
+```
+sudo mv /tmp/rtl-sdr.rules /etc/udev/rules.d/
+```
+```
+sudo udevadm trigger
+```
+Reboot your PI
+```
+sudo reboot now
+```
 
+**Command to download and execute the rules to get the permissions to use your RTL-SDR:**
+
+```
+wget -O /tmp/rtl-sdr.rules https://raw.githubusercontent.com/keenerd/rtl-sdr/master/rtl-sdr.rules
+```
+```
+sudo mv /tmp/rtl-sdr.rules /etc/udev/rules.d/
+```
+```
+sudo udevadm control --reload-rules
+```
+```
+sudo mv /tmp/rtl-sdr.rules /etc/udev/rules.d/
+```
+```
+sudo udevadm trigger
+```
+Reboot your PI
+```
+sudo reboot now
+```
 
