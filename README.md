@@ -16,13 +16,13 @@ sudo apt upgrade -y
 ```
 
 
-**Command to upgrade the OS:**
+**Command to install the required libraries:**
 
 ```
-sudo apt upgrade
+sudo apt install -y git cmake build-essential libusb-1.0-0-dev
 ```
 
-**Command to install wget:**
+**Commandns to download and compil the RTL-SDR v4-compatibele version:**
 
 ```
 sudo apt install wget
